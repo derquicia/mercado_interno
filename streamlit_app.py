@@ -11,8 +11,8 @@ conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES" FROM scentia_res;', ttl="0")
 
 
-hist_values = np.histogram(df, df.periodo)
-st.bar_chart(hist_values)
+
+st.line_chart(df,df.periodo,df.cervezas)
 
 # st.write(df)
 st.bar_chart(df)
