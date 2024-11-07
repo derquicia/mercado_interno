@@ -20,7 +20,7 @@ st_echarts(options=options, renderer="svg")
 
 
 
-    with st.echo("below"):
+with st.echo("below"):
         st.markdown("Click on chart elements")
         options = {
             "xAxis": {
@@ -31,8 +31,8 @@ st_echarts(options=options, renderer="svg")
                 {"name": "sales", "type": "bar", "data": [5, 20, 36, 10, 10, 20]}
             ],
         }
-        events = {"click": "function(params, echarts) {alert('click detection');}"}
-        st_echarts(options, events=events)
+events = {"click": "function(params, echarts) {alert('click detection');}"}
+st_echarts(options, events=events)
 
 
 
