@@ -20,7 +20,7 @@ st_echarts(options=options, renderer="svg")
 
 
 
- with st.echo("below"):
+with st.echo("below"):
      b = (
         Bar()
         .add_xaxis(["Microsoft", "Amazon", "IBM", "Oracle", "Google", "Alibaba"])
