@@ -19,6 +19,44 @@ options = {
 st_echarts(options=options, renderer="svg")
 
 
+with st.echo("below"):
+        options = {
+            "backgroundColor": "#404a59",
+            "title": {
+                "text": "全国主要城市空气质量",
+                "subtext": "data from PM25.in",
+                "sublink": "http://www.pm25.in",
+                "left": "center",
+                "textStyle": {"color": "#fff"},
+            },
+            "tooltip": {"trigger": "item"},
+            "legend": {
+                "orient": "vertical",
+                "top": "bottom",
+                "left": "right",
+                "data": ["pm2.5"],
+                "textStyle": {"color": "#fff"},
+            },
+            "visualMap": {
+                "min": 0,
+                "max": 300,
+                "splitNumber": 5,
+                "color": ["#d94e5d", "#eac736", "#50a3ba"],
+                "textStyle": {"color": "#fff"},
+            },
+            "geo": {
+                "map": "china",
+                "label": {"emphasis": {"show": False}},
+                "itemStyle": {
+                    "normal": {"areaColor": "#323c48", "borderColor": "#111"},
+                    "emphasis": {"areaColor": "#2a333d"},
+                },
+            },
+        }
+        st_echarts(options)
+
+
+
 conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT año,sum(sup) FROM superficie_m group by año;', ttl="0")
 #st.write(df)
