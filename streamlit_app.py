@@ -8,7 +8,7 @@ df = conn.query('SELECT año,sum(sup) FROM superficie_m group by año;', ttl="0"
 st.bar_chart(df)
 
 conn = st.connection("postgresql", type="sql")
-df = conn.query('SELECT anio||''|| mes as periodo,"CERVEZAS","VINOS_COMUNES" FROM scentia_resumen;', ttl="0")
+df = conn.query('SELECT anio::text||'-'|| mes::text as periodo,"CERVEZAS","VINOS_COMUNES" FROM scentia_resumen;', ttl="0")
 # st.write(df)
 st.bar_chart(df)
 
