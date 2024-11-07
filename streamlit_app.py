@@ -19,8 +19,8 @@ options = {
 st_echarts(options=options, renderer="svg")
 
 
-with st.echo("below"):
-        options = {
+
+   options = {
             "backgroundColor": "#404a59",
             "title": {
                 "text": "全国主要城市空气质量",
@@ -53,7 +53,7 @@ with st.echo("below"):
                 },
             },
         }
-        st_echarts(options)
+   st_echarts(options)
 
 
 
