@@ -11,7 +11,7 @@ conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS" FROM scentia_res;', ttl="0")
 st.write(df)
 
-st.subheader('Ventas en el Canal Mayorista)
+st.subheader('Ventas en el Canal Mayorista')
 st.line_chart(df,x="periodo",y=["CERVEZAS","VINOS_COMUNES","VINOS_FINOS"])
 
 # st.write(df)
