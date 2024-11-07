@@ -4,12 +4,12 @@ import numpy as np
 
 conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT año,sum(sup) FROM superficie_m group by año;', ttl="0")
-st.write(df)
+#st.write(df)
 st.bar_chart(df)
 
 conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES" FROM scentia_res;', ttl="0")
-
+st.write(df)
 
 
 st.line_chart(df,df.periodo)
