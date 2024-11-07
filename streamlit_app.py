@@ -16,7 +16,7 @@ options = {
         {"data": [820, 932, 901, 934, 1290, 1330, 1320], "type": "line"}
     ],
 }
-st_echarts(options=options)
+st_echarts(options=options, renderer="svg")
 
 
 conn = st.connection("postgresql", type="sql")
