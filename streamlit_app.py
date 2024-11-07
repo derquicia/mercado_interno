@@ -8,11 +8,11 @@ df = conn.query('SELECT año,sum(sup) FROM superficie_m group by año;', ttl="0"
 st.bar_chart(df)
 
 conn = st.connection("postgresql", type="sql")
-df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES" FROM scentia_res;', ttl="0")
+df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS" FROM scentia_res;', ttl="0")
 st.write(df)
 
-
-st.line_chart(df,x="periodo",y=["CERVEZAS","VINOS_COMUNES"])
+st.subheader('Ventas en el Canal Mayorista)
+st.line_chart(df,x="periodo",y=["CERVEZAS","VINOS_COMUNES","VINOS_FINOS"])
 
 # st.write(df)
 st.bar_chart(df)
