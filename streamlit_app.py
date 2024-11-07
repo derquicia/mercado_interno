@@ -7,6 +7,12 @@ df = conn.query('SELECT año,sum(sup) FROM superficie_m group by año;', ttl="0"
 # st.write(df)
 st.bar_chart(df)
 
+conn = st.connection("postgresql", type="sql")
+df = conn.query('SELECT año || mes ,cervezas,vinos_comunes FROM scentia_resumen;', ttl="0")
+# st.write(df)
+st.bar_chart(df)
+
+
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
             'streamlit-demo-data/uber-raw-data-sep14.csv.gz')
