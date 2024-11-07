@@ -20,40 +20,19 @@ st_echarts(options=options, renderer="svg")
 
 
 
-   options = {
-        "backgroundColor": "#404a59",
-         "title": {
-                "text": "全国主要城市空气质量",
-                "subtext": "data from PM25.in",
-                "sublink": "http://www.pm25.in",
-                "left": "center",
-                "textStyle": {"color": "#fff"},
-         },
-         "tooltip": {"trigger": "item"},
-          "legend": {
-               "orient": "vertical",
-                "top": "bottom",
-                "left": "right",
-                "data": ["pm2.5"],
-                "textStyle": {"color": "#fff"},
+    with st.echo("below"):
+        st.markdown("Click on chart elements")
+        options = {
+            "xAxis": {
+                "data": ["shirt", "cardign", "chiffon shirt", "pants", "heels", "socks"]
             },
-            "visualMap": {
-                "min": 0,
-                "max": 300,
-                "splitNumber": 5,
-                "color": ["#d94e5d", "#eac736", "#50a3ba"],
-                "textStyle": {"color": "#fff"},
-            },
-            "geo": {
-                "map": "china",
-                "label": {"emphasis": {"show": False}},
-                "itemStyle": {
-                    "normal": {"areaColor": "#323c48", "borderColor": "#111"},
-                    "emphasis": {"areaColor": "#2a333d"},
-                },
-            },
+            "yAxis": {},
+            "series": [
+                {"name": "sales", "type": "bar", "data": [5, 20, 36, 10, 10, 20]}
+            ],
         }
-   st_echarts(options)
+        events = {"click": "function(params, echarts) {alert('click detection');}"}
+        st_echarts(options, events=events)
 
 
 
