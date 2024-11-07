@@ -12,7 +12,7 @@ df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES" FROM scentia_res;', t
 st.write(df)
 
 
-st.line_chart(df)
+st.line_chart(df,x="periodo",y="CERVEZAS")
 
 # st.write(df)
 st.bar_chart(df)
