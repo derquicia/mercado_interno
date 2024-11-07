@@ -12,10 +12,12 @@ df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS" FROM sc
 st.write(df)
 
 st.subheader('Ventas en el Canal Mayorista')
+
+if st.checkbox('Ver datos en forma de tabla'):
+    st.write(df)
+
 st.line_chart(df,x="periodo",y=["CERVEZAS","VINOS_COMUNES","VINOS_FINOS"])
 
-# st.write(df)
-st.bar_chart(df)
 
 
 DATE_COLUMN = 'date/time'
