@@ -34,7 +34,7 @@ st_echarts(options=options, renderer="svg")
                 toolbox_opts=opts.ToolboxOpts(),
             )
         )
-st_pyecharts(b)
+    st_pyecharts(b)
 
 
 
