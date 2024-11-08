@@ -40,7 +40,6 @@ with st.echo("below"):
 st_pyecharts(b)
 
 
-
 conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT año,sum(sup) FROM superficie_m group by año;', ttl="0")
 #st.write(df)
