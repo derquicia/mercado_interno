@@ -91,7 +91,7 @@ st_echarts(options=bar_options)
 option = {
     "tooltip": {
         "trigger": 'axis',
-        "axisPointer": { type: 'cross' }
+        "axisPointer": { "type": 'cross' }
     },
     "legend": {},    
     "xAxis": {
