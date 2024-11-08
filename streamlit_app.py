@@ -59,7 +59,7 @@ st.line_chart(df,x="periodo",y=["CERVEZAS","VINOS_COMUNES","VINOS_FINOS"])
 st.dataframe(df)
 option = {
     "xAxis": {
-        "type": periodo,
+        "type": Time_Created,
         df: [periodo],
     },
     "yAxis": {"type": censored},
