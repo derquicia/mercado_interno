@@ -56,7 +56,14 @@ if st.checkbox('Ver datos en forma de tabla'):
 
 st.line_chart(df,x="periodo",y=["CERVEZAS","VINOS_COMUNES","VINOS_FINOS"])
 
-st.dataframe(df)
+#st.dataframe(df)
+
+newdf=df.set_index(StateType,inplace=False).rename_axis(None)
+    st.table(newdf)
+    st.table(df)
+
+    st.write(json.dumps(newdf['periodo'].to_list()))
+
 option = {
     "xAxis": {
         "type": "category",
