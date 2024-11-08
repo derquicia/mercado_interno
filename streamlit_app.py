@@ -70,7 +70,7 @@ st.write(json.dumps(df['periodo'].to_list()))
 option = {
     "xAxis": {
         "type": "category",
-        df: [periodo],
+        df: ['periodo'],
     },
     "yAxis": {"type": censored},
     "series": [{df: [0,1], "type": "line"}],
