@@ -67,6 +67,7 @@ newdf=df.set_index('periodo',inplace=False).rename_axis(None)
 
 #st.write(json.dumps(df['periodo'].to_list()))
 #st.write(json.dumps(df['VINOS_COMUNES'].tolist()))
+
 """
 bar_options = {
     "xAxis": {
@@ -83,6 +84,7 @@ bar_options = {
     }
 }
 st_echarts(options=bar_options)
+
 """
 
 
@@ -92,8 +94,8 @@ option = {
         "data": df['periodo'].to_list(),
     },
     "yAxis": {"type": "value"},
-    "series": [{"data": df['VINOS_COMUNES'].to_list(), "type": "line"}],
-    "series": [{"data": df['VINOS_FINOS'].to_list(), "type": "line"}],
+    "series": [{"data": df['VINOS_COMUNES'].to_list(), "type": "line"},{"data": df['VINOS_FINOS'].to_list(), "type": "line"} ],
+#    "series": [{"data": df['VINOS_FINOS'].to_list(), "type": "line"}],
 }
 st_echarts(
     options=option, height="400px",
