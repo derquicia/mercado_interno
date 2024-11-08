@@ -94,7 +94,7 @@ option = {
         "data": df['periodo'].to_list(),
     },
     "yAxis": {"type": "value"},
-    "series": [{"data": df['VINOS_COMUNES'].to_list(), "type": "line"},{"data": df['VINOS_FINOS'].to_list(), "type": "line"} ],
+    "series": [{"data": df['VINOS_COMUNES'].to_list(), "type": "line", "name": 'Vinos Comunes'},{"data": df['VINOS_FINOS'].to_list(), "type": "line"} ],
 #    "series": [{"data": df['VINOS_FINOS'].to_list(), "type": "line"}],
 }
 st_echarts(
