@@ -44,11 +44,7 @@ conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT año,sum(sup) FROM superficie_m group by año;', ttl="0")
 #st.write(df)
 st.bar_chart(df)
-{
-query = "SELECT año,sum(sup) FROM superficie_m group by año;"
-data = pd.read_sql(query,conn)
-st.dataframe(data)
-}
+
 
 conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS" FROM scentia_res;', ttl="0")
