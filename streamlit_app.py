@@ -71,19 +71,19 @@ bar_options = {
          "type":'value',
 
         "axisTick": {"alignWithLabel": True},
-        "series":[{"data":json.dumps(newdf['INCOMING_DATE'].to_list()),"type":'bar'}]
+        "series":[{"data":json.dumps(newdf['periodo'].to_list()),"type":'bar'}]
     },
     "yAxis": {
         "type":'value',
         "data":json.dumps(newdf.index.values.tolist())
         #"axisLabel": {formatter: "{MMM} {yyyy}" },
-        #"series": [{"data":json.dumps(newdf['Incoming_date'].to_list()),"type": 'bar'}],
+        #"series": [{"data":json.dumps(newdf['periodo'].to_list()),"type": 'bar'}],
     }
 }
-    clicked_label = st_echarts(
-    options=bar_options
+clicked_label = st_echarts(
+options=bar_options
 
-     )
+)
 
 
 
