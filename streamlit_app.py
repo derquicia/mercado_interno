@@ -48,7 +48,7 @@ st.bar_chart(df)
 
 conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS" FROM scentia_res;', ttl="0")
-st.write(df)
+#st.write(df)
 
 st.subheader('Ventas en el Canal Mayorista')
 
@@ -62,8 +62,8 @@ st.line_chart(df,x="periodo",y=["CERVEZAS","VINOS_COMUNES","VINOS_FINOS"])
 df['periodo'] = df['periodo'].astype(str)
 
 newdf=df.set_index('periodo',inplace=False).rename_axis(None)
-st.table(newdf)
-st.table(df)
+#st.table(newdf)
+#st.table(df)
 
 st.write(json.dumps(df['periodo'].to_list()))
 st.write(json.dumps(df['VINOS_COMUNES'].tolist()))
