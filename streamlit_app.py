@@ -65,9 +65,9 @@ newdf=df.set_index('periodo',inplace=False).rename_axis(None)
 #st.table(newdf)
 #st.table(df)
 
-st.write(json.dumps(df['periodo'].to_list()))
-st.write(json.dumps(df['VINOS_COMUNES'].tolist()))
-
+#st.write(json.dumps(df['periodo'].to_list()))
+#st.write(json.dumps(df['VINOS_COMUNES'].tolist()))
+"""
 bar_options = {
     "xAxis": {
          "type":'value',
@@ -83,7 +83,7 @@ bar_options = {
     }
 }
 st_echarts(options=bar_options)
-
+"""
 
 
 option = {
