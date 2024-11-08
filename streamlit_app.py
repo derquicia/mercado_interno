@@ -75,7 +75,7 @@ bar_options = {
     },
     "yAxis": {
         "type":'value',
-        "data":json.dumps(df.index.values.tolist())
+        "data":json.dumps(df['VINOS_COMUNES'].tolist())
         #"axisLabel": {formatter: "{MMM} {yyyy}" },
         #"series": [{"data":json.dumps(df['periodo'].to_list()),"type": 'bar'}],
     }
