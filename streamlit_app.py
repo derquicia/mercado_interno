@@ -60,10 +60,10 @@ st.dataframe(df)
 option = {
     "xAxis": {
         "type": periodo,
-        data: [periodo],
+        df: [periodo],
     },
     "yAxis": {"type": censored},
-    "series": [{data: [0,1], "type": "line"}],
+    "series": [{df: [0,1], "type": "line"}],
 }
 st_echarts(
     options=option, height="400px",
