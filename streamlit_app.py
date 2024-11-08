@@ -89,11 +89,11 @@ st_echarts(options=bar_options)
 
 
 option = {
-    tooltip: {
-        trigger: 'axis',
-        axisPointer: { type: 'cross' }
+    "tooltip": {
+        "trigger": 'axis',
+        "axisPointer": { type: 'cross' }
     },
-    legend: {},    
+    "legend": {},    
     "xAxis": {
         "type": "category",
         "data": df['periodo'].to_list(),
