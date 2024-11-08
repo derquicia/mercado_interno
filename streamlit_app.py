@@ -46,8 +46,8 @@ df = conn.query('SELECT año,sum(sup) FROM superficie_m group by año;', ttl="0"
 #st.write(df)
 st.bar_chart(df)
 
-query = "Select * from FreeWeiboPosts"
-data = pd.read_sql(query,mydb)
+query = "SELECT año,sum(sup) FROM superficie_m group by año;"
+data = pd.read_sql(query,conn)
 st.dataframe(data)
 
 
