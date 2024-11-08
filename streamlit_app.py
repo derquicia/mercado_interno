@@ -46,6 +46,11 @@ df = conn.query('SELECT año,sum(sup) FROM superficie_m group by año;', ttl="0"
 #st.write(df)
 st.bar_chart(df)
 
+query = "Select * from FreeWeiboPosts"
+data = pd.read_sql(query,mydb)
+st.dataframe(data)
+
+
 conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS" FROM scentia_res;', ttl="0")
 st.write(df)
@@ -84,6 +89,19 @@ bar_options = {
 }
 st_echarts(options=bar_options)
 
+
+
+option = {
+    "xAxis": {
+        "type": "category",
+        "data": df['periodo'].to_list(),
+    },
+    "yAxis": {"type": "value"},
+    "series": [{"data": df['VINOS_COMUNES'].to_list(), "type": "line"}],
+}
+st_echarts(
+    options=option, height="400px",
+)
 
 
 
