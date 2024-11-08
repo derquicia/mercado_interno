@@ -60,7 +60,7 @@ st.dataframe(df)
 option = {
     "xAxis": {
         "type": Time_Created,
-        data: [Time_Created],
+        data: [periodo],
     },
     "yAxis": {"type": censored},
     "series": [{data: [0,1], "type": "line"}],
