@@ -71,7 +71,7 @@ bar_options = {
          "type":'value',
 
         "axisTick": {"alignWithLabel": True},
-        "series":[{"data":json.dumps(newdf['periodo'].to_list()),"type":'bar'}]
+        "series":[{"data":json.dumps(df['periodo'].to_list()),"type":'bar'}]
     },
     "yAxis": {
         "type":'value',
