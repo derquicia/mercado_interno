@@ -75,9 +75,9 @@ bar_options = {
     },
     "yAxis": {
         "type":'value',
-        "data":json.dumps(newdf.index.values.tolist())
+        "data":json.dumps(df.index.values.tolist())
         #"axisLabel": {formatter: "{MMM} {yyyy}" },
-        #"series": [{"data":json.dumps(newdf['periodo'].to_list()),"type": 'bar'}],
+        #"series": [{"data":json.dumps(df['periodo'].to_list()),"type": 'bar'}],
     }
 }
 clicked_label = st_echarts(
