@@ -73,7 +73,7 @@ bar_options = {
          "type":'value',
 
         "axisTick": {"alignWithLabel": True},
-        "series":[{"data":df['periodo'],"type":'bar'}]
+        "series":[{"data":json.dumps(df['periodo'].to_list()),"type":'bar'}]
     },
     "yAxis": {
         "type":'value',
@@ -82,10 +82,7 @@ bar_options = {
         #"series": [{"data":json.dumps(df['periodo'].to_list()),"type": 'bar'}],
     }
 }
-clicked_label = st_echarts(
-options=bar_options
-
-)
+st_echarts(options=bar_options)
 
 
 
