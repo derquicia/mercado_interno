@@ -66,18 +66,24 @@ st.table(newdf)
 st.table(df)
 
 st.write(json.dumps(df['periodo'].to_list()))
-
-option = {
+bar_options = {
     "xAxis": {
-        "type": "category",
-        df: ['periodo'],
+         "type":'value',
+
+        "axisTick": {"alignWithLabel": True},
+        "series":[{"data":json.dumps(newdf['INCOMING_DATE'].to_list()),"type":'bar'}]
     },
-    "yAxis": {"type": censored},
-    "series": [{df: [0,1], "type": "line"}],
+    "yAxis": {
+        "type":'value',
+        "data":json.dumps(newdf.index.values.tolist())
+        #"axisLabel": {formatter: "{MMM} {yyyy}" },
+        #"series": [{"data":json.dumps(newdf['Incoming_date'].to_list()),"type": 'bar'}],
+    }
 }
-st_echarts(
-    options=option, height="400px",
-)
+    clicked_label = st_echarts(
+    options=bar_options
+
+     )
 
 
 
