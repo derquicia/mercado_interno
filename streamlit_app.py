@@ -92,7 +92,7 @@ option = {
         "data": df['periodo'].to_list(),
     },
     "yAxis": {"type": "value"},
-    "series": [{"data": df['VINOS_COMUNES','VINOS_FINOS'].to_list(), "type": "line"}],
+    "series": [{"data": df['VINOS_COMUNES,VINOS_FINOS'].to_list(), "type": "line"}],
 }
 st_echarts(
     options=option, height="400px",
