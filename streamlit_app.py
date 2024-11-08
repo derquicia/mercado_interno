@@ -65,7 +65,7 @@ newdf=df.set_index('periodo',inplace=False).rename_axis(None)
 st.table(newdf)
 st.table(df)
 
-st.write(json.dumps(newdf['periodo'].to_list()))
+st.write(json.dumps(df['periodo'].to_list()))
 
 option = {
     "xAxis": {
