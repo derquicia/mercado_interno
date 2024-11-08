@@ -21,7 +21,7 @@ st.subheader('Ventas en el Canal Mayorista, Según datos de Scentia')
 if st.checkbox('Ver datos en forma de tabla'):
     st.write(df)
 
-st.line_chart(df,x="periodo",y=["CERVEZAS","VINOS_COMUNES","VINOS_FINOS"])
+#st.line_chart(df,x="periodo",y=["CERVEZAS","VINOS_COMUNES","VINOS_FINOS"])
 
 #st.dataframe(df)
 
