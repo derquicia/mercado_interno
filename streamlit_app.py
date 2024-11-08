@@ -56,6 +56,20 @@ if st.checkbox('Ver datos en forma de tabla'):
 
 st.line_chart(df,x="periodo",y=["CERVEZAS","VINOS_COMUNES","VINOS_FINOS"])
 
+st.dataframe(df)
+option = {
+    "xAxis": {
+        "type": Time_Created,
+        data: [Time_Created],
+    },
+    "yAxis": {"type": censored},
+    "series": [{data: [0,1], "type": "line"}],
+}
+st_echarts(
+    options=option, height="400px",
+)
+
+
 
 
 DATE_COLUMN = 'date/time'
