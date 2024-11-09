@@ -193,7 +193,7 @@ option = {
           "itemStyle": {
             "borderColor": '#fff'
           },
-          "data": df3['VINOS_COMUNES']
+          "data": df3['VINOS_COMUNES'].to_list(),
         }
     ]
 }
