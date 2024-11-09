@@ -179,8 +179,11 @@ st_echarts(
 
 #st.write(json.dumps(df3['VINOS_COMUNES'].tolist()))
 df3.to_json('diskData', orient='records', lines=True)
+json_list = json.loads(json.dumps(list(df3.T.to_dict().values())))
 #diskData = json.loads(temp.json)
+st.write('convert')
 st.write(diskData)
+st.write(json_list)
 
 
 option = {
