@@ -186,6 +186,7 @@ option = {
     },
     "legend": {},    
     "data": df3
+}
 st_echarts(
     options=option, height="400px",
 )
