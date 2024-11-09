@@ -178,7 +178,7 @@ st_echarts(
 )
 
 #st.write(json.dumps(df3['VINOS_COMUNES'].tolist()))
-df3.to_json('temp.json', orient='records', lines=True)
+df3.to_json('diskData', orient='records', lines=True)
 #diskData = json.loads(temp.json)
 
 option = {
@@ -195,7 +195,7 @@ option = {
           "itemStyle": {
             "borderColor": '#fff'
           },
-          "data": temp.json,
+          "data": diskData,
         }
     ]
 }
