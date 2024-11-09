@@ -183,7 +183,7 @@ json_list = json.loads(json.dumps(list(df3.T.to_dict().values())))
 #diskData = json.loads(temp.json)
 st.write('convert')
 #st.write(diskData)
-st.write(json_list)
+#st.write(json_list)
 
 
 option = {
@@ -200,7 +200,7 @@ option = {
           "itemStyle": {
             "borderColor": '#fff'
           },
-          "data": diskData,
+          "data": json_list,
         }
     ]
 }
