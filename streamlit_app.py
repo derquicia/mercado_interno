@@ -13,7 +13,7 @@ from pyecharts import options as opts
 
 
 conn = st.connection("postgresql", type="sql")
-df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES" FROM scentia_res;', ttl="0")
+df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES" FROM scentia_res;', ttl="0")
 #st.write(df)
 
 st.subheader('Ventas en el Canal Mayorista, Según datos de Scentia')
