@@ -177,7 +177,8 @@ st_echarts(
     options=option, height="400px",
 )
 
-
+st.write(json.dumps(df3['VINOS_COMUNES'].tolist()))
+diskData = json.loads(df3)
 
 option = {
     "tooltip": {
@@ -193,7 +194,7 @@ option = {
           "itemStyle": {
             "borderColor": '#fff'
           },
-          "data": df3['VINOS_COMUNES'].to_list(),
+          "data": diskData,
         }
     ]
 }
