@@ -184,8 +184,23 @@ option = {
         "trigger": 'axis',
         "axisPointer": { "type": 'cross' }
     },
-    "legend": {},    
-    "data": df3
+    "legend": {},   
+    "series": [
+        {
+          name: 'Ventas Totales',
+          type: 'treemap',
+          visibleMin: 300,
+          label: {
+            show: true,
+            formatter: '{b}'
+          },
+          itemStyle: {
+            borderColor: '#fff'
+          },
+          levels: getLevelOption(),
+          "data": df3
+        }
+    ]
 }
 st_echarts(
     options=option, height="400px",
