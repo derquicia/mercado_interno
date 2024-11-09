@@ -65,7 +65,7 @@ df1 = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERI
 
 st.subheader('Ventas en el Canal Self Cadenas, Según datos de Scentia')
 
-if st.checkbox('Ver datos en forma '):
+if st.checkbox('Ver Tabla '):
     st.write(df1)
 
 
