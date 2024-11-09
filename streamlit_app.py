@@ -141,5 +141,42 @@ st_echarts(
 )
 
 
+df3 = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_total;', ttl="0")
 
+st.subheader('Ventas Totales, Según datos de Scentia')
+
+if st.checkbox('Ver como  una Tabla '):
+    st.write(df3)
+
+
+df3['periodo'] = df3['periodo'].astype(str)
+
+newdf3=df3.set_index('periodo',inplace=False).rename_axis(None)
+
+
+
+option = {
+    "tooltip": {
+        "trigger": 'axis',
+        "axisPointer": { "type": 'cross' }
+    },
+    "legend": {},    
+    "xAxis": {
+        "type": "category",
+        "data": df3['periodo'].to_list(),
+    },
+    "yAxis": {"type": "value"},
+    "series": [{"data": df3['VINOS_COMUNES'].to_list(), "type": "line", "name": 'Vinos Comunes'}
+               ,{"data": df3['VINOS_FINOS'].to_list(), "type": "line","name":'Vinos Finos'}
+               ,{"data": df3['CERVEZAS'].to_list(), "type": "line","name":'Cervezas'} 
+               ,{"data": df3['APERITIVOS_RTD'].to_list(), "type": "line","name":'Ape. RTD'} 
+               ,{"data": df3['ESPUMANTES'].to_list(), "type": "line","name":'Espumantes'} 
+               ,{"data": df3['APERITIVOS_ALC'].to_list(), "type": "line","name":'Ape. Alc'} 
+               ,{"data": df3['VINOS_FORTIFICADOS'].to_list(), "type": "line","name":'Vinos Fort.'} 
+               ,{"data": df3['SIDRAS_Y_SABORES'].to_list(), "type": "line","name":'Sidras'} ],
+#    "series": [{"data": df3['VINOS_FINOS'].to_list(), "type": "line"}],
+}
+st_echarts(
+    options=option, height="400px",
+)
 
