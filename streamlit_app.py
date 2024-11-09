@@ -13,7 +13,7 @@ from pyecharts import options as opts
 
 
 conn = st.connection("postgresql", type="sql")
-df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS" FROM scentia_res;', ttl="0")
+df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES" FROM scentia_res;', ttl="0")
 #st.write(df)
 
 st.subheader('Ventas en el Canal Mayorista, Según datos de Scentia')
@@ -47,7 +47,9 @@ option = {
         "data": df['periodo'].to_list(),
     },
     "yAxis": {"type": "value"},
-    "series": [{"data": df['VINOS_COMUNES'].to_list(), "type": "line", "name": 'Vinos Comunes'},{"data": df['VINOS_FINOS'].to_list(), "type": "line","name":'Vinos Finos'},{"data": df['CERVEZAS'].to_list(), "type": "line","name":'Cervezas'} ],
+    "series": [{"data": df['VINOS_COMUNES'].to_list(), "type": "line", "name": 'Vinos Comunes'}
+               ,{"data": df['VINOS_FINOS'].to_list(), "type": "line","name":'Vinos Finos'}
+               ,{"data": df['CERVEZAS'].to_list(), "type": "line","name":'Cervezas'} ],
 #    "series": [{"data": df['VINOS_FINOS'].to_list(), "type": "line"}],
 }
 st_echarts(
