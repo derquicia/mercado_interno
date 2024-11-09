@@ -185,16 +185,7 @@ option = {
         "axisPointer": { "type": 'cross' }
     },
     "legend": {},    
-    "series": [{"data": df3['VINOS_COMUNES'].to_list(), "type": "treemap", "name": 'Vinos Comunes'}
-               ,{"data": df3['VINOS_FINOS'].to_list(), "type": "treemap","name":'Vinos Finos'}
-               ,{"data": df3['CERVEZAS'].to_list(), "type": "treemap","name":'Cervezas'} 
-               ,{"data": df3['APERITIVOS_RTD'].to_list(), "type": "treemap","name":'Ape. RTD'} 
-               ,{"data": df3['ESPUMANTES'].to_list(), "type": "treemap","name":'Espumantes'} 
-               ,{"data": df3['APERITIVOS_ALC'].to_list(), "type": "treemap","name":'Ape. Alc'} 
-               ,{"data": df3['VINOS_FORTIFICADOS'].to_list(), "type": "treemap","name":'Vinos Fort.'} 
-               ,{"data": df3['SIDRAS_Y_SABORES'].to_list(), "type": "treemap","name":'Sidras'} ],
-#    "series": [{"data": df3['VINOS_FINOS'].to_list(), "type": "line"}],
-}
+    "data": df3
 st_echarts(
     options=option, height="400px",
 )
