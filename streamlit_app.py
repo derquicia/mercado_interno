@@ -193,7 +193,6 @@ option = {
           "itemStyle": {
             "borderColor": '#fff'
           },
-          "levels": getLevelOption(),
           "data": df3
         }
     ]
