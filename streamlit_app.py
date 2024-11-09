@@ -61,6 +61,54 @@ st_echarts(
     options=option, height="400px",
 )
 
+df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_self_cadenas;', ttl="0")
+
+st.subheader('Ventas en el Canal Mayorista, Según datos de Scentia')
+
+if st.checkbox('Ver datos en forma de tabla'):
+    st.write(df)
+
+#st.line_chart(df,x="periodo",y=["CERVEZAS","VINOS_COMUNES","VINOS_FINOS"])
+
+#st.dataframe(df)
+
+df['periodo'] = df['periodo'].astype(str)
+
+newdf=df.set_index('periodo',inplace=False).rename_axis(None)
+#st.table(newdf)
+#st.table(df)
+
+#st.write(json.dumps(df['periodo'].to_list()))
+#st.write(json.dumps(df['VINOS_COMUNES'].tolist()))
+
+
+
+option = {
+    "tooltip": {
+        "trigger": 'axis',
+        "axisPointer": { "type": 'cross' }
+    },
+    "legend": {},    
+    "xAxis": {
+        "type": "category",
+        "data": df['periodo'].to_list(),
+    },
+    "yAxis": {"type": "value"},
+    "series": [{"data": df['VINOS_COMUNES'].to_list(), "type": "line", "name": 'Vinos Comunes'}
+               ,{"data": df['VINOS_FINOS'].to_list(), "type": "line","name":'Vinos Finos'}
+               ,{"data": df['CERVEZAS'].to_list(), "type": "line","name":'Cervezas'} 
+               ,{"data": df['APERITIVOS_RTD'].to_list(), "type": "line","name":'Ape. RTD'} 
+               ,{"data": df['ESPUMANTES'].to_list(), "type": "line","name":'Espumantes'} 
+               ,{"data": df['APERITIVOS_ALC'].to_list(), "type": "line","name":'Ape. Alc'} 
+               ,{"data": df['VINOS_FORTIFICADOS'].to_list(), "type": "line","name":'Vinos Fort.'} 
+               ,{"data": df['SIDRAS_Y_SABORES'].to_list(), "type": "line","name":'Sidras'} ],
+#    "series": [{"data": df['VINOS_FINOS'].to_list(), "type": "line"}],
+}
+st_echarts(
+    options=option, height="400px",
+)
+
+
 
 
 
