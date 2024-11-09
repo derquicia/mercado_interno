@@ -49,7 +49,11 @@ option = {
     "yAxis": {"type": "value"},
     "series": [{"data": df['VINOS_COMUNES'].to_list(), "type": "line", "name": 'Vinos Comunes'}
                ,{"data": df['VINOS_FINOS'].to_list(), "type": "line","name":'Vinos Finos'}
-               ,{"data": df['CERVEZAS'].to_list(), "type": "line","name":'Cervezas'} ],
+               ,{"data": df['CERVEZAS'].to_list(), "type": "line","name":'Cervezas'} 
+               ,{"data": df['APERITIVOS_RTD'].to_list(), "type": "line","name":'Ape. RTD'} 
+               ,{"data": df['ESPUMANTES'].to_list(), "type": "line","name":'Espumantes'} 
+               ,{"data": df['APERITIVOS_ALC'].to_list(), "type": "line","name":'Ape. Alc'} ],
+,{"data": df['APERITIVOS_ALC'].to_list(), "type": "line","name":'Ape. Alc'} ],
 #    "series": [{"data": df['VINOS_FINOS'].to_list(), "type": "line"}],
 }
 st_echarts(
