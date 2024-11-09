@@ -13,7 +13,7 @@ from pyecharts import options as opts
 
 
 conn = st.connection("postgresql", type="sql")
-df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES" FROM scentia_res;', ttl="0")
+df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_res;', ttl="0")
 #st.write(df)
 
 st.subheader('Ventas en el Canal Mayorista, Según datos de Scentia')
@@ -53,6 +53,7 @@ option = {
                ,{"data": df['APERITIVOS_RTD'].to_list(), "type": "line","name":'Ape. RTD'} 
                ,{"data": df['ESPUMANTES'].to_list(), "type": "line","name":'Espumantes'} 
                ,{"data": df['APERITIVOS_ALC'].to_list(), "type": "line","name":'Ape. Alc'} 
+               ,{"data": df['VINOS_FORTIFICADOS'].to_list(), "type": "line","name":'Vinos Fort.'} 
                ,{"data": df['SIDRAS_Y_SABORES'].to_list(), "type": "line","name":'Sidras'} ],
 #    "series": [{"data": df['VINOS_FINOS'].to_list(), "type": "line"}],
 }
