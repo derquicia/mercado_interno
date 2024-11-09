@@ -52,8 +52,8 @@ option = {
                ,{"data": df['CERVEZAS'].to_list(), "type": "line","name":'Cervezas'} 
                ,{"data": df['APERITIVOS_RTD'].to_list(), "type": "line","name":'Ape. RTD'} 
                ,{"data": df['ESPUMANTES'].to_list(), "type": "line","name":'Espumantes'} 
-               ,{"data": df['APERITIVOS_ALC'].to_list(), "type": "line","name":'Ape. Alc'} ],
-,{"data": df['APERITIVOS_ALC'].to_list(), "type": "line","name":'Ape. Alc'} ],
+               ,{"data": df['APERITIVOS_ALC'].to_list(), "type": "line","name":'Ape. Alc'} 
+               ,{"data": df['SIDRAS_Y_SABORES'].to_list(), "type": "line","name":'Sidras'} ],
 #    "series": [{"data": df['VINOS_FINOS'].to_list(), "type": "line"}],
 }
 st_echarts(
