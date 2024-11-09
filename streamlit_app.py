@@ -187,17 +187,17 @@ option = {
     "legend": {},   
     "series": [
         {
-          name: 'Ventas Totales',
-          type: 'treemap',
-          visibleMin: 300,
-          label: {
-            show: true,
-            formatter: '{b}'
+          "name": 'Ventas Totales',
+          "type": 'treemap',
+          "visibleMin": 300,
+          "label": {
+            "show": true,
+            "formatter": '{b}'
           },
-          itemStyle: {
-            borderColor: '#fff'
+          "itemStyle": {
+            "borderColor": '#fff'
           },
-          levels: getLevelOption(),
+          "levels": getLevelOption(),
           "data": df3
         }
     ]
