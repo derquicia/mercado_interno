@@ -185,11 +185,6 @@ option = {
         "axisPointer": { "type": 'cross' }
     },
     "legend": {},    
-    "xAxis": {
-        "type": "category",
-        "data": df3['periodo'].to_list(),
-    },
-    "yAxis": {"type": "value"},
     "series": [{"data": df3['VINOS_COMUNES'].to_list(), "type": "treemap", "name": 'Vinos Comunes'}
                ,{"data": df3['VINOS_FINOS'].to_list(), "type": "treemap","name":'Vinos Finos'}
                ,{"data": df3['CERVEZAS'].to_list(), "type": "treemap","name":'Cervezas'} 
