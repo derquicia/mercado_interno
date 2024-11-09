@@ -101,11 +101,11 @@ st_echarts(
 )
 
 
-df2 = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_self_cadenas;', ttl="0")
+df2 = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_independientes;', ttl="0")
 
 st.subheader('Ventas en el Canal Independiente, Según datos de Scentia')
 
-if st.checkbox('Ver Tabla1 '):
+if st.checkbox('Ver como Tabla1 '):
     st.write(df2)
 
 
