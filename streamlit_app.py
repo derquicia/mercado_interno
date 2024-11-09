@@ -190,10 +190,6 @@ option = {
           "name": 'Ventas Totales',
           "type": 'treemap',
           "visibleMin": 300,
-          "label": {
-            "show": true,
-            "formatter": '{b}'
-          },
           "itemStyle": {
             "borderColor": '#fff'
           },
