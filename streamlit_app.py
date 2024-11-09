@@ -178,7 +178,7 @@ st_echarts(
 )
 
 
-df3 = conn.query('SELECT "CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_total_tot;', ttl="0")
+df4 = conn.query('SELECT "CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_total_tot;', ttl="0")
 
 st.subheader('Ventas Totales ultimo año, Según datos de Scentia')
 
