@@ -195,6 +195,20 @@ option = {
     "tooltip": {
         "trigger": 'axis',
         "axisPointer": { "type": 'cross' }
+        "formatter": function (info) {
+                var value = info.value;
+                var treePathInfo = info.treePathInfo;
+                var treePath = [];
+
+                for (var i = 1; i < treePathInfo.length; i++) {
+                    treePath.push(treePathInfo[i].name);
+                }
+
+                return [
+                    '<div class="tooltip-title">' + formatUtil.encodeHTML(treePath.join('/')) + '</div>',
+                    'Disk Usage: ' + formatUtil.addCommas(value) + ' KB',
+                ].join('');
+            }        
     },
     "legend": {},   
     "series": [
