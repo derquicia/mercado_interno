@@ -205,6 +205,26 @@ option = {
           "itemStyle": {
             "borderColor": '#fff'
           },
+         levels: [
+               {
+                     itemStyle: {
+                     normal: {
+                            borderWidth: 3,
+                            borderColor: '#333',
+                            gapWidth: 3
+                            }
+                        }
+                    },
+                    {
+                            color: ['#942e38', '#aaa', '#269f3c'],
+                            colorMappingBy: 'value',
+                            itemStyle: {
+                                normal: {
+                                    gapWidth: 1
+                                }
+                            }
+                        }
+         ],            
           "data": json_list,
         }
     ]
