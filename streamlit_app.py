@@ -188,7 +188,7 @@ json_list = json.loads(json.dumps(list(df4.T.to_dict().values())))
 #diskData = json.loads(temp.json)
 st.write('convert')
 #st.write(diskData)
-st.write(json_list)
+#st.write(json_list)
 
 
 option = {
@@ -204,7 +204,7 @@ option = {
             {
                 "name": "Ventas Totales",
                 "type": "treemap",
-                "visibleMin": 300,
+                "visibleMin": 100,
                 "label": {"show": True, "formatter": "{b}"},
                 "itemStyle": {"borderColor": "#fff"},
                 "levels": [
@@ -220,5 +220,5 @@ option = {
     ]
 }
 st_echarts(
-    options=option, height="400px",
+    options=option, height="600px",
 )
