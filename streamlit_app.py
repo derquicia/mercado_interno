@@ -178,7 +178,7 @@ st_echarts(
 )
 
 
-df4 = conn.query('SELECT *  FROM scentia_tot_anual;', ttl="0")
+df4 = conn.query('SELECT Columns,Values  FROM scentia_tot_anual;', ttl="0")
 
 st.subheader('Ventas Totales ultimo año, Según datos de Scentia')
 
