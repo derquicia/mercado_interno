@@ -186,7 +186,7 @@ st.subheader('Ventas Totales ultimo año, Según datos de Scentia')
 #df4.to_json('diskData', orient='records', lines=True)
 json_list = json.loads(json.dumps(list(df4.T.to_dict().values())))
 #diskData = json.loads(temp.json)
-st.write('convert')
+#st.write('convert')
 #st.write(diskData)
 #st.write(json_list)
 
