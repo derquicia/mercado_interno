@@ -194,8 +194,8 @@ st.write(json_list)
 option = {
     "tooltip": {
         "trigger": 'axis',
-        "axisPointer": { "type": 'cross' },
-    }
+        "axisPointer": { "type": 'cross' }
+    },
     "legend": {"value"},   
     "series": [
             {
