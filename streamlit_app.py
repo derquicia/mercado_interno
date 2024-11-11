@@ -196,7 +196,7 @@ option = {
         "trigger": 'axis',
         "axisPointer": { "type": 'cross' }
     },
-    "legend": {"data": ["value","name"},   
+    "legend": {"data": ["value","name"]},   
     "series": [
             {
                 "name": "Ventas Totales",
