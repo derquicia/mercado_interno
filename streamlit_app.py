@@ -214,10 +214,6 @@ option = {
                 ],
                 "data": json_list,
             }
-        ],
-    }            
-          "data": json_list,
-        }
     ]
 }
 st_echarts(
