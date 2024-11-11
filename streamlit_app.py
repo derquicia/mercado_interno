@@ -196,9 +196,9 @@ option = {
         "trigger": 'axis',
         "axisPointer": { "type": 'cross' },
         "formatter": function (info) {
-                var value = info.value,
-                var treePathInfo = info.treePathInfo,
-                var treePath = [],
+                var "value" = info.value,
+                var "treePathInfo" = info.name,
+                var "treePath" = [],
 
                 for (var i = 1; i < treePathInfo.length; i++) {
                     treePath.push(treePathInfo[i].name),
