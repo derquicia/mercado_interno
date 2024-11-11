@@ -178,7 +178,7 @@ st_echarts(
 )
 
 
-df4 = conn.query('SELECT "Values" as value ,"Columns" as categoria  FROM scentia_tot_anual;', ttl="0")
+df4 = conn.query('SELECT "Values" as value ,"Columns" as name  FROM scentia_tot_anual;', ttl="0")
 
 st.subheader('Ventas Totales ultimo año, Según datos de Scentia')
 
@@ -199,7 +199,7 @@ option = {
     "legend": {},   
     "series": [
             {
-                "name": "Disk Usage",
+                "name": "Ventas Totales",
                 "type": "treemap",
                 "visibleMin": 300,
                 "label": {"show": True, "formatter": "{b}"},
