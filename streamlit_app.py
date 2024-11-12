@@ -148,7 +148,7 @@ if st.checkbox('Ver como  una Tabla '):
 
 df3['periodo'] = df3['periodo'].astype(str)
 
-newdf3=df3.set_index('periodo',inplace=True).rename_axis(None)
+newdf3=df3.set_index('periodo',inplace=False).rename_axis(None)
 
 
 
