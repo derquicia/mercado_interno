@@ -10,7 +10,7 @@ from pyecharts import options as opts
 
 
 hide_github_icon = """
-#GithubIcon {
+#MainMenu {
   visibility: hidden;
 }
 """
