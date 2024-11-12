@@ -44,15 +44,19 @@ REMOVE_PADDING_FROM_SIDES="""
 
 st.markdown(REMOVE_PADDING_FROM_SIDES, unsafe_allow_html=True)
 
+
+
+
 st.markdown(
-    """
+    r"""
     <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
+    .stDeployButton {
+            visibility: hidden;
+        }
     </style>
-    """,
-    unsafe_allow_html=True
+    """, unsafe_allow_html=True
 )
+
 
 conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_res;', ttl="0")
