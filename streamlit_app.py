@@ -33,6 +33,17 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+REMOVE_PADDING_FROM_SIDES="""
+<style>
+    .block-container {
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }   
+</style>
+"""
+
+st.markdown(REMOVE_PADDING_FROM_SIDES, unsafe_allow_html=True)
+
 conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_res;', ttl="0")
 #st.write(df)
