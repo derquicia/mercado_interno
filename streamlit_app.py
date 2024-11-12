@@ -13,6 +13,16 @@ from pyecharts import options as opts
     visibility: hidden;
 }
 
+    st.markdown(
+        r"""
+        <style>
+        .stAppDeployButton {
+                visibility: hidden;
+            }
+        </style>
+        """, unsafe_allow_html=True
+    )
+
 hide_st_style = """ 
     <style>
     #MainMenu {visibilty: hidden;}
