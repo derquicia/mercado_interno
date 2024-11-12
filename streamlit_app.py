@@ -8,7 +8,7 @@ from streamlit_echarts import st_pyecharts
 from pyecharts.charts import Bar
 from pyecharts import options as opts
 
-stm.sidebar.success("You are currently viewing Page One Geek")
+
 
 conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_res;', ttl="0")
