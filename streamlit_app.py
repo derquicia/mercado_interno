@@ -9,9 +9,6 @@ from pyecharts.charts import Bar
 from pyecharts import options as opts
 
 
-[data-testid="stStatusWidget"] {
-    visibility: hidden;
-}
 
     st.markdown(
         r"""
