@@ -10,7 +10,7 @@ from pyecharts import options as opts
 
 
 
-    st.markdown(
+st.markdown(
         r"""
         <style>
         .stAppDeployButton {
@@ -18,7 +18,7 @@ from pyecharts import options as opts
             }
         </style>
         """, unsafe_allow_html=True
-    )
+)
 
 hide_st_style = """ 
     <style>
