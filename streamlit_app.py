@@ -10,14 +10,8 @@ from pyecharts import options as opts
 
 
 
-def page2():
-    st.title("Second page")
-
-pg = st.navigation([
-    st.Page("/pages/Exportaciones.py", title="First page", icon="🔥"),
-    st.Page(page2, title="Second page", icon=":material/favorite:"),
-])
-pg.run()
+st.sidebar.title("Folder visualizer")
+st.sidebar.markdown(f"[dir1]({filelist[0]})")
 
 conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_res;', ttl="0")
