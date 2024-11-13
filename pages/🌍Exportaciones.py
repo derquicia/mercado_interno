@@ -30,7 +30,7 @@ option = {
     "legend": {},    
     "xAxis": {
         "type": "category",
-        "data": df['periodo'].to_list(),
+        "data": df['anio'].to_list(),
     },
     "yAxis": {"type": "value"},
     "series": [{"data": df['litros'].to_list(), "type": "line", "name": 'Litros'}
