@@ -93,6 +93,6 @@ option = {
                 "type": "scatter",
             }
         ],
-    }
-st_echarts(options=options, height="500px")
+ }
+st_echarts(options=options, height="400px",)
 
