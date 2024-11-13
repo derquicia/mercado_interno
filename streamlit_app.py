@@ -11,6 +11,8 @@ from pyecharts import options as opts
 
 st.set_page_config(page_title="Estadisticas",)
 
+st.set_page_config(page_title="My Tab Title")
+
 def main():
     # builds the sidebar menu
     with st.sidebar:
