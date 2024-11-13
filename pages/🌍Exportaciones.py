@@ -39,3 +39,35 @@ option = {
 st_echarts(
     options=option, height="400px" ,
 )
+
+
+df1 = conn.query('select periodo,litros,fob from inf_expo_anio_mes ;', ttl="0")
+#st.write(df1)
+ 
+st.subheader('Evolución Exportaciones de vimos por Mes')
+
+if st.checkbox('Ver datos en  tabla'):
+    st.write(df1)
+
+
+df1['periodo'] = df['periodo'].astype(str)
+
+newdf1=df1.set_index('periodo',inplace=False).rename_axis(None)
+
+option = {
+    "tooltip": {
+        "trigger": 'axis',
+        "axisPointer": { "type": 'cross' }
+    },
+    "legend": {},    
+    "xAxis": {
+        "type": "category",
+        "data": df1['periodo'].to_list(),
+    },
+    "yAxis": {"type": "value"},
+    "series": [{"data": df1['litros'].to_list(), "type": "line", "name": 'Litros'}
+               ,{"data": df1['fob'].to_list(), "type": "line","name":'Fob'}]
+}
+st_echarts(
+    options=option, height="400px" ,
+)
