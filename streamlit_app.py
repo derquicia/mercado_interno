@@ -11,18 +11,33 @@ from pyecharts import options as opts
 
 st.set_page_config(page_title="Estadisticas",)
 
+def set_page_title(title):
+    st.sidebar.markdown(unsafe_allow_html=True, body=f"""
+        <iframe height=0 srcdoc="<script>
+            const title = window.parent.document.querySelector('title') \
+                
+            const oldObserver = window.parent.titleObserver
+            if (oldObserver) {{
+                oldObserver.disconnect()
+            }} \
+
+            const newObserver = new MutationObserver(function(mutations) {{
+                const target = mutations[0].target
+                if (target.text !== '{title}') {{
+                    target.text = '{title}'
+                }}
+            }}) \
+
+            newObserver.observe(title, {{ childList: true }})
+            window.parent.titleObserver = newObserver \
+
+            title.text = '{title}'
+        </script>" />
+    """)
 
 
-def main():
-    # builds the sidebar menu
-    with st.sidebar:
-        st.page_link('streamlit_app.py', label='Individual Checker', icon='🔥')
+set_page_title("My new title")
 
-    st.title(f'🛡️ Competition Checker')
-
-if __name__ == '__main__':
-    main()
-    
 
 
 conn = st.connection("postgresql", type="sql")
