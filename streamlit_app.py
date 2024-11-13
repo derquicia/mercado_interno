@@ -16,8 +16,6 @@ pg = st.navigation([
     st.Page("pages/🍾Espumantes.py", title="Espumantes", icon="🍾"),
     st.Page("pages/🚜Superficie.py", title="Superficie", icon="🚜"),
 
-
-
 ])
 pg.run()
 
