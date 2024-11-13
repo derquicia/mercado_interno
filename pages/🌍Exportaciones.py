@@ -50,6 +50,7 @@ if st.checkbox('Ver datos en  tabla'):
     st.write(df1)
 
 
+
 df1['periodo'] = df['periodo'].astype(str)
 
 newdf1=df1.set_index('periodo',inplace=False).rename_axis(None)
