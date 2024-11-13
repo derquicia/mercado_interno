@@ -14,7 +14,7 @@ st.set_page_config(page_title="Estadisticas",)
 
 show_pages(
     [
-        Page("mercado_interno/streamlit_app.py", "Home", "🏠"),
+        Page("/mount/src/mercado_interno/streamlit_app.py", "Home", "🏠"),
     ]
 )
 
