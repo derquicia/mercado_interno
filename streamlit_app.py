@@ -13,7 +13,7 @@ from pyecharts import options as opts
 st.set_page_config(page_title="Estadisticas",)
 
 
-st.beta_set_page_title("eteterte")
+st.sidebar.title("Folder visualizer")
 
 conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_res;', ttl="0")
