@@ -7,6 +7,9 @@ from streamlit_echarts import JsCode
 from streamlit_echarts import st_pyecharts
 from pyecharts.charts import Bar
 from pyecharts import options as opts
+
+ st.Page("streamlit_app.py", title="Indicadores", icon="🌍"),
+
 """
 pg = st.navigation([
     st.Page("pages/🌍Exportaciones.py", title="Exportaciones", icon="🌍"),
