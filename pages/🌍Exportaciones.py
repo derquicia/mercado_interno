@@ -41,7 +41,7 @@ st_echarts(
 )
 
 
-df1 = conn.query('select periodo,litros,fob from inf_expo_anio_mes ;', ttl="0")
+df1 = conn.query('select periodo,litros,fob from info_expo_anio_mes ;', ttl="0")
 #st.write(df1)
  
 st.subheader('Evolución Exportaciones de vimos por Mes')
