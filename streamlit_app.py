@@ -7,7 +7,7 @@ from streamlit_echarts import JsCode
 from streamlit_echarts import st_pyecharts
 from pyecharts.charts import Bar
 from pyecharts import options as opts
-from st_pages import add_page_title, get_nav_from_toml
+from st_pages import add_page_title
 
 
 st.set_page_config(page_title="Estadisticas",)
@@ -16,6 +16,7 @@ add_page_title()
 show_pages(
     [
         Page("streamlit_app.py", "Home", "🏠"),
+        Page("Exportaciones.py", "Home", "🏠"),
     ]
 )
 
