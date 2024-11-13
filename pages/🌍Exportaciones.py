@@ -73,7 +73,7 @@ st_echarts(
     options=option, height="400px" ,
 )
 
-df2 = conn.query('select variedad1,litros,fob from info_expo_anio_variedad ;', ttl="0")
+df2 = conn.query('select name,value from info_expo_anio_variedad ;', ttl="0")
 #st.write(df1)
 json_list = json.loads(json.dumps(list(df2.T.to_dict().values()))) 
 st.subheader('Exportaciones por Variedad')
@@ -84,7 +84,7 @@ option = {
         #"trigger": 'axis',
         #"axisPointer": { "type": 'cross' },
         "formatter": JsCode(
-            "function(info){var value=info.litros;var treePathInfo=info.treePathInfo;var treePath=[];for(var i=1;i<treePathInfo.length;i+=1){treePath.push(treePathInfo[i].name)}return['<div class=\"tooltip-title\">'+treePath.join('/')+'</div>','Ventas Acumuladas: ' + litros ].join('')};"
+            "function(info){var value=info.value;var treePathInfo=info.treePathInfo;var treePath=[];for(var i=1;i<treePathInfo.length;i+=1){treePath.push(treePathInfo[i].name)}return['<div class=\"tooltip-title\">'+treePath.join('/')+'</div>','Ventas Acumuladas: ' + value ].join('')};"
         ).js_code,
     },
     "legend": {"data": ["litros","variedad1"]},   
