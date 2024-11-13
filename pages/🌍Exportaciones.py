@@ -94,5 +94,5 @@ option = {
             }
         ],
     }
-    st_echarts(options=options, height="500px")
+st_echarts(options=options, height="500px")
 
