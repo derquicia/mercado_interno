@@ -10,6 +10,9 @@ from pyecharts import options as opts
 
 pg = st.navigation([
     st.Page("pages/🌍Exportaciones.py", title="First page", icon="🔥"),
+    st.Page("pages/🍇Cosecha.py", title="First page", icon="🔥"),
+
+
 ])
 pg.run()
 
