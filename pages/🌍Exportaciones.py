@@ -82,10 +82,7 @@ st.subheader('Exportaciones por Variedad')
 option = {
         "title": {
             "text": "WORLD COFFEE RESEARCH SENSORY LEXICON",
-            "subtext": "Source: https://worldcoffeeresearch.org/work/sensory-lexicon/",
-            "textStyle": {"fontSize": 14, "align": "center"},
-            "subtextStyle": {"align": "center"},
-            "sublink": "https://worldcoffeeresearch.org/work/sensory-lexicon/",
+
         },
         "series": {
             "type": "sunburst",
