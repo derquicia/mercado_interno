@@ -84,29 +84,15 @@ option = {
             "text": "WORLD COFFEE RESEARCH SENSORY LEXICON",
 
         },
-        "series": {
-            "type": "sunburst",
-            "data": json_list,
-            "radius": [0, "95%"],
-            "sort": None,
-            "emphasis": {"focus": "ancestor"},
-            "levels": [
-                {},
-                {
-                    "r0": "15%",
-                    "r": "35%",
-                    "itemStyle": {"borderWidth": 2},
-                    "label": {"rotate": "tangential"},
-                },
-                {"r0": "35%", "r": "70%", "label": {"align": "right"}},
-                {
-                    "r0": "70%",
-                    "r": "72%",
-                    "label": {"position": "outside", "padding": 3, "silent": False},
-                    "itemStyle": {"borderWidth": 3},
-                },
-            ],
-        },
+        "xAxis": {},
+        "yAxis": {},
+        "series": [
+            {
+                "symbolSize": 20,
+                "data": json_list ,
+                "type": "scatter",
+            }
+        ],
     }
-st_echarts(option, height="700px")
+    st_echarts(options=options, height="500px")
 
