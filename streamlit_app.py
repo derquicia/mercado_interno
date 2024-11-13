@@ -7,20 +7,13 @@ from streamlit_echarts import JsCode
 from streamlit_echarts import st_pyecharts
 from pyecharts.charts import Bar
 from pyecharts import options as opts
-from st_pages import Page, show_pages
+
 
 
 st.set_page_config(page_title="Estadisticas",)
 
 
-show_pages(
-    [
-        Page("streamlit_app.py", "Home", "🏠"),
-        Page("Exportaciones.py", "Home", "🏠"),
-    ]
-)
-
-
+st.beta_set_page_title("eteterte")
 
 conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_res;', ttl="0")
