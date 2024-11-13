@@ -7,7 +7,7 @@ from streamlit_echarts import JsCode
 from streamlit_echarts import st_pyecharts
 from pyecharts.charts import Bar
 from pyecharts import options as opts
-from modules.nav import Navbar
+
 
 st.set_page_config(page_title="Estadisticas",)
 
@@ -18,10 +18,6 @@ def main():
         st.page_link('pages/competition.py', label='Competition Checker', icon='🛡️')
 
     st.title(f'🛡️ Competition Checker')
-def main():
-    Navbar()
-
-    st.title(f'🔥 Individual Checker')
 
 if __name__ == '__main__':
     main()
