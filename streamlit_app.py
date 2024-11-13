@@ -10,6 +10,16 @@ from pyecharts import options as opts
 
 st.set_page_config(page_title="Estadisticas",)
 
+def main():
+    # builds the sidebar menu
+    with st.sidebar:
+        st.page_link('streamlit_app.py', label='Individual Checker', icon='🔥')
+        st.page_link('pages/competition.py', label='Competition Checker', icon='🛡️')
+
+    st.title(f'🛡️ Competition Checker')
+
+
+
 conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_res;', ttl="0")
 #st.write(df)
