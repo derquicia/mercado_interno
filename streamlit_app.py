@@ -9,7 +9,7 @@ from pyecharts.charts import Bar
 from pyecharts import options as opts
 
 pg = st.navigation([
-    st.Page("pages/Exportacions.py", title="First page", icon="🔥"),
+    st.Page("pages/🌍Exportaciones.py", title="First page", icon="🔥"),
 ])
 pg.run()
 
