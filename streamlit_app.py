@@ -11,7 +11,7 @@ from pyecharts import options as opts
 
 
 st.set_page_config(page_title="Estadisticas",)
-add_page_title()
+
 
 show_pages(
     [
