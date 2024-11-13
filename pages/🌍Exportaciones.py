@@ -11,7 +11,7 @@ from pyecharts import options as opts
 conn = st.connection("postgresql", type="sql")
 df = conn.query('select anio,litros,fob from inf_expo_anio ;', ttl="0")
 #st.write(df)
-
+ 
 st.subheader('Evolución Exportaciones de vimos por año')
 
 if st.checkbox('Ver datos en forma de tabla'):
