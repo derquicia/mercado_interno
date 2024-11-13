@@ -94,5 +94,7 @@ option = {
             }
         ],
  }
-st_echarts(options=options, height="400px",)
+st_echarts(
+    options=option, height="400px" ,
+)
 
