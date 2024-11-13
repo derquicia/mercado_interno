@@ -37,5 +37,5 @@ option = {
                ,{"data": df['fob'].to_list(), "type": "line","name":'Fob'}]
 }
 st_echarts(
-    options=option, height="400px" , weight="800px"
+    options=option, height="400px" ,
 )
