@@ -2,3 +2,4 @@ streamlit
 psycopg2-binary
 sqlalchemy
 streamlit-echarts
+st_pages 
