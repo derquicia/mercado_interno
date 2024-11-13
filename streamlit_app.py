@@ -15,6 +15,7 @@ def main():
     # builds the sidebar menu
     with st.sidebar:
         st.page_link('streamlit_app.py', label='Individual Checker', icon='🔥')
+        st.page_link('streamlit app', label='Individual Checker', icon='🔥')
 
     st.title(f'🛡️ Competition Checker')
 
