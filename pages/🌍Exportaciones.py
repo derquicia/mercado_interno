@@ -75,7 +75,7 @@ st_echarts(
 
 df2 = conn.query('select variedad1,litros,fob from info_expo_anio_variedad ;', ttl="0")
 #st.write(df1)
- 
+json_list = json.loads(json.dumps(list(df2.T.to_dict().values()))) 
 st.subheader('Exportaciones por Variedad')
 
 
@@ -89,7 +89,7 @@ option = {
         },
         "series": {
             "type": "sunburst",
-            "data": data,
+            "data": json_list,
             "radius": [0, "95%"],
             "sort": None,
             "emphasis": {"focus": "ancestor"},
