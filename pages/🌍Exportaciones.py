@@ -34,7 +34,7 @@ option = {
     },
     "yAxis": {"type": "value"},
     "series": [{"data": df['litros'].to_list(), "type": "line", "name": 'Litros'}
-               ,{"data": df['fob'].to_list(), "type": "line","name":'Fob'}
+               ,{"data": df['fob'].to_list(), "type": "line","name":'Fob'}]
 }
 st_echarts(
     options=option, height="400px",
