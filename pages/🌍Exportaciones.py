@@ -9,7 +9,7 @@ from pyecharts.charts import Bar
 from pyecharts import options as opts
 
 conn = st.connection("postgresql", type="sql")
-df = conn.query('select anio,sum(cantlitros) litros,sum(valorfobsolo) fob from exportaciones2_m where producto  not in ('Mosto','Alcohol') group by anio;', ttl="0")
+df = conn.query('select anio,litros,fob from inf_expo_anio ;', ttl="0")
 #st.write(df)
 
 st.subheader('Evolución Exportaciones de vimos por año')
