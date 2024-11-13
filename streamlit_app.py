@@ -12,7 +12,7 @@ pg = st.navigation([
     st.Page("pages/🌍Exportaciones.py", title="Exportaciones", icon="🌍"),
     st.Page("pages/🍇Cosecha.py", title="Cosecha", icon="🍇"),
     st.Page("pages/🍷Mosto.py", title="Mosto", icon="🍷"),
-    st.Page("pages/🍇Cosecha.py", title="Cosecha", icon="🍇"),
+    st.Page("pages/🍾Espumantes.py", title="Espumantes", icon="🍾"),
 ])
 pg.run()
 
