@@ -11,11 +11,11 @@ from pyecharts import options as opts
  
 hide_streamlit_style = """
             <style>
-                /* Hide the Streamlit header and menu */
+                
                 header {visibility: hidden;}
-                /* Optionally, hide the footer */
+                
                 .streamlit-footer {display: none;}
-                /* Hide your specific div class, replace class name with the one you identified */
+                
                 .st-emotion-cache-uf99v8 {display: none;}
             </style>
             """
