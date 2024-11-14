@@ -41,7 +41,7 @@ hide_streamlit_style = """
                 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-st.set_page_config(page_title="dashboard", layout="wide", page_icon=":bar_chart:")  
+st.set_page_config(page_title="dashboard", layout="wide",)  
 
 
 hide_streamlit_style = """
