@@ -41,7 +41,7 @@ hide_streamlit_style = """
                 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-st.footer(text="Imprint: My Company", activate=True)
+st.set_page_config(footer="Imprint: My Company")
 
 hide_streamlit_style = """
             <style>
