@@ -41,7 +41,7 @@ hide_streamlit_style = """
                 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-st.set_page_config(page_title="dashboard")  
+st.header('Basketball')
 
 
 hide_streamlit_style = """
