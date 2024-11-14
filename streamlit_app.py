@@ -46,7 +46,7 @@ st.sidebar.page_link('streamlit_app.py', label='Home')
 
  with st.sidebar:
         st.page_link('streamlit_app.py', label='Individual Checker', icon='🔥')
-        st.page_link('pages/Exportaciones.py', label='Competition Checker', icon='🛡️')
+        st.page_link('pages/🌍Exportaciones.py', label='Competition Checker', icon='🛡️')
    
 
 hide_streamlit_style = """
