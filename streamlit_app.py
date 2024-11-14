@@ -13,7 +13,7 @@ hide_streamlit_style = """
             <style>
                 
                 header {visibility: hidden;}
-                
+                footer {visibility: hidden;} 
                 .streamlit-footer {display: none;}
                 
                 .st-emotion-cache-uf99v8 {display: none;}
