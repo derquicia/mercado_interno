@@ -9,7 +9,18 @@ from pyecharts.charts import Bar
 from pyecharts import options as opts
 
  
+hide_streamlit_style = """
+            <style>
+                /* Hide the Streamlit header and menu */
+                header {visibility: hidden;}
+                /* Optionally, hide the footer */
+                .streamlit-footer {display: none;}
+                /* Hide your specific div class, replace class name with the one you identified */
+                .st-emotion-cache-uf99v8 {display: none;}
+            </style>
+            """
 
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 conn = st.connection("postgresql", type="sql")
 df = conn.query('SELECT periodo,"CERVEZAS","VINOS_COMUNES","VINOS_FINOS","APERITIVOS_ALC","APERITIVOS_RTD","ESPUMANTES","FRIZANTES","SIDRAS_Y_SABORES","VINOS_FORTIFICADOS" FROM scentia_res;', ttl="0")
